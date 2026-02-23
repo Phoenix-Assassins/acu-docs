@@ -40,13 +40,17 @@
 
 | Type | Name |
 |------|------|
-|  |  |
+| qlist\<stationurl> | urls |
+| uint32 | unkUint1 |
+| uint32 | unkUint2 |
+| [SearchCriteria](#searchcriteria-structure) | searchCriteria |
 
 ### Response
 
 | Type | Name |
 |------|------|
-|  |  |
+| uint32 | unkUint1 |
+| uint32 | unkUint2 |
 
 # (2) CreatePushTicket
 
@@ -56,13 +60,16 @@
 
 | Type | Name |
 |------|------|
-|  |  |
+| uint32 | unkUint1 |
+| uint32 | unkUint2 |
+| [SearchCriteria](#searchcriteria-structure) | searchCriteria |
 
 ### Response
 
 | Type | Name |
 |------|------|
-|  |  |
+| uint32 | unkUint1 |
+| uint32 | unkUint2 |
 
 # (3) UpdateTicket
 
@@ -72,13 +79,12 @@
 
 | Type | Name |
 |------|------|
-|  |  |
+| uint32 | unkUint |
+| qlist\<[PropertyVariant](#propertyvariant-structure)> | props |
 
 ### Response
 
-| Type | Name |
-|------|------|
-|  |  |
+This method does not return anything.
 
 # (4) CancelTicket
 
@@ -86,15 +92,11 @@
 
 ### Request
 
-| Type | Name |
-|------|------|
-|  |  |
+Unused method, payload unknown.
 
 ### Response
 
-| Type | Name |
-|------|------|
-|  |  |
+This method does not return anything.
 
 # (5) CancelAllTicket
 
@@ -102,15 +104,11 @@
 
 ### Request
 
-| Type | Name |
-|------|------|
-|  |  |
+This method does not take any parameters.
 
 ### Response
 
-| Type | Name |
-|------|------|
-|  |  |
+This method does not return anything.
 
 # (6) CreateSession
 
@@ -118,15 +116,13 @@
 
 ### Request
 
-| Type | Name |
-|------|------|
-|  |  |
+Unused method, payload unknown.
 
 ### Response
 
 | Type | Name |
 |------|------|
-|  |  |
+| uint32 | sessionId |
 
 # (7) ReserveSessionId
 
@@ -134,15 +130,13 @@
 
 ### Request
 
-| Type | Name |
-|------|------|
-|  |  |
+This method does not take any parameters.
 
 ### Response
 
 | Type | Name |
 |------|------|
-|  |  |
+| uint32 | sessionId |
 
 # (8) CreateSessionWithReservedId
 
@@ -152,13 +146,18 @@
 
 | Type | Name |
 |------|------|
-|  |  |
+| uint32 | unkUint1 |
+| uint32 | unkUint2 |
+| qlist<[PropertyVariant](#propertyvariant-structure)> | props |
+| qlist\<stationurl> | urls |
+| qlist<[SessionMember](#sessionmember-structure)> | members |
+| uint32 | unkUint3 |
 
 ### Response
 
 | Type | Name |
 |------|------|
-|  |  |
+| uint32 | sessionId |
 
 # (9) UpdateSession
 
@@ -168,13 +167,12 @@
 
 | Type | Name |
 |------|------|
-|  |  |
+| uint32 | sessionId |
+| qlist\<[PropertyVariant](#propertyvariant-structure)> | props |
 
 ### Response
 
-| Type | Name |
-|------|------|
-|  |  |
+This method does not return anything.
 
 # (10) LeaveSession
 
@@ -184,13 +182,11 @@
 
 | Type | Name |
 |------|------|
-|  |  |
+| uint32 | sessionId |
 
 ### Response
 
-| Type | Name |
-|------|------|
-|  |  |
+This method does not return anything.
 
 # (11) GetSession
 
@@ -200,13 +196,13 @@
 
 | Type | Name |
 |------|------|
-|  |  |
+| uint32 | sessionId |
 
 ### Response
 
 | Type | Name |
 |------|------|
-|  |  |
+| [MatchmakingSession](#matchmakingsession-structure) | session |
 
 # (12) GetMemberSessions
 
@@ -216,13 +212,13 @@
 
 | Type | Name |
 |------|------|
-|  |  |
+| qlist<[profileid](#profileid-structure)> | members |
 
 ### Response
 
 | Type | Name |
 |------|------|
-|  |  |
+| qlist<[MemberSessions](#membersessions-structure)> | memberSessions |
 
 # (13) MigrateHost
 
@@ -232,13 +228,12 @@
 
 | Type | Name |
 |------|------|
-|  |  |
+| uint32 | unkUint |
+| qlist\<stationurl> | urls |
 
 ### Response
 
-| Type | Name |
-|------|------|
-|  |  |
+This method does not return anything.
 
 # (14) JoinSession
 
@@ -248,13 +243,11 @@
 
 | Type | Name |
 |------|------|
-|  |  |
+| uint32 | sessionId |
 
 ### Response
 
-| Type | Name |
-|------|------|
-|  |  |
+This method does not return anything.
 
 # (15) JoinPlayer
 
@@ -264,13 +257,11 @@
 
 | Type | Name |
 |------|------|
-|  |  |
+| [profileid](#profileid-structure) | joinedPlayer |
 
 ### Response
 
-| Type | Name |
-|------|------|
-|  |  |
+This method does not return anything.
 
 # (16) AddMembers
 
@@ -278,15 +269,11 @@
 
 ### Request
 
-| Type | Name |
-|------|------|
-|  |  |
+Unused method, payload unknown.
 
 ### Response
 
-| Type | Name |
-|------|------|
-|  |  |
+This method does not return anything.
 
 # (17) RemoveMembers
 
@@ -296,13 +283,12 @@
 
 | Type | Name |
 |------|------|
-|  |  |
+| uint32 | unkUint |
+| qlist<[profileid](#profileid-structure)> | members |
 
 ### Response
 
-| Type | Name |
-|------|------|
-|  |  |
+This method does not return anything.
 
 # (18) ReportJoinSuccess
 
@@ -312,13 +298,11 @@
 
 | Type | Name |
 |------|------|
-|  |  |
+| uint32 | unkUint |
 
 ### Response
 
-| Type | Name |
-|------|------|
-|  |  |
+This method does not return anything.
 
 # (19) ReportJoinFailure
 
@@ -328,13 +312,12 @@
 
 | Type | Name |
 |------|------|
-|  |  |
+| uint32 | unkUint1 |
+| uint32 | unkUint2 |
 
 ### Response
 
-| Type | Name |
-|------|------|
-|  |  |
+This method does not return anything.
 
 # (20) SendInvitation
 
@@ -344,13 +327,11 @@
 
 | Type | Name |
 |------|------|
-|  |  |
+| [InvitationRequest](#invitationrequest-structure) | invitation |
 
 ### Response
 
-| Type | Name |
-|------|------|
-|  |  |
+This method does not return anything.
 
 # (21) GetReceivedInvitationsCount
 
@@ -358,15 +339,13 @@
 
 ### Request
 
-| Type | Name |
-|------|------|
-|  |  |
+Unused method, payload unknown.
 
 ### Response
 
 | Type | Name |
 |------|------|
-|  |  |
+| uint32 | recvInvitations |
 
 # (22) GetReceivedInvitations
 
@@ -376,13 +355,13 @@
 
 | Type | Name |
 |------|------|
-|  |  |
+| [ResultRange](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#resultrange-structure) | range |
 
 ### Response
 
 | Type | Name |
 |------|------|
-|  |  |
+| [ReceivedInvitationsResult](#receivedinvitationsresult-structure) | recvInvResult |
 
 # (23) GetSentInvitationsCount
 
@@ -390,15 +369,13 @@
 
 ### Request
 
-| Type | Name |
-|------|------|
-|  |  |
+Unused method, payload unknown.
 
 ### Response
 
 | Type | Name |
 |------|------|
-|  |  |
+| uint32 | sentInvitations |
 
 # (24) GetSentInvitations
 
@@ -406,15 +383,13 @@
 
 ### Request
 
-| Type | Name |
-|------|------|
-|  |  |
+Unused method, payload unknown.
 
 ### Response
 
 | Type | Name |
 |------|------|
-|  |  |
+| [ReceivedInvitationsResult](#receivedinvitationsresult-structure) | sentInvResult |
 
 # (25) AcceptInvitation
 
@@ -424,13 +399,11 @@
 
 | Type | Name |
 |------|------|
-|  |  |
+| [Invitation](#inivitation-structure) | invitation |
 
 ### Response
 
-| Type | Name |
-|------|------|
-|  |  |
+This method does not return anything.
 
 # (26) DeclineInvitation
 
@@ -438,15 +411,11 @@
 
 ### Request
 
-| Type | Name |
-|------|------|
-|  |  |
+Unused method, payload unknown.
 
 ### Response
 
-| Type | Name |
-|------|------|
-|  |  |
+This method does not return anything.
 
 # (27) CancelInvitation
 
@@ -454,15 +423,11 @@
 
 ### Request
 
-| Type | Name |
-|------|------|
-|  |  |
+Unused method, payload unknown.
 
 ### Response
 
-| Type | Name |
-|------|------|
-|  |  |
+This method does not return anything.
 
 # (28) AddPlayerContexts
 
@@ -470,15 +435,11 @@
 
 ### Request
 
-| Type | Name |
-|------|------|
-|  |  |
+Unused method, payload unknown.
 
 ### Response
 
-| Type | Name |
-|------|------|
-|  |  |
+This method does not return anything.
 
 # (29) RemovePlayerContexts
 
@@ -486,12 +447,90 @@
 
 ### Request
 
-| Type | Name |
-|------|------|
-|  |  |
+Unused method, payload unknown.
 
 ### Response
 
+This method does not return anything.
+
+# Types
+
+## SearchCriteria ([Structure](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#structure))
+
 | Type | Name |
 |------|------|
-|  |  |
+| qlist\<[PropertyVariant](#propertyvariant-structure)> | props |
+| qlist\<uint32> | unkUints |
+| uint16 | unkUint |
+
+## PropertyVariant ([Structure](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#structure))
+
+| Type | Name |
+|------|------|
+| string | key |
+| variant | value |
+
+## SessionMember ([Structure](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#structure))
+
+| Type | Name |
+|------|------|
+| [profileid](#profileid-structure) | pid |
+| uint32 | unkUint |
+
+## profileid ([Structure](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#structure))
+
+| Type | Name |
+|------|------|
+| uint32 | pid |
+| uint16 | unkShort1 |
+| uint16 | unkShort2 |
+| uint16 | unkShort3 |
+| uint16 | unkShort4 |
+| uint16 | unkShort5 |
+| uint16 | unkShort6 |
+
+## MatchmakingSession ([Structure](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#structure))
+
+| Type | Name |
+|------|------|
+| uint32 | unkUint1 |
+| uint32 | unkUint2 |
+| datetime | time |
+| qlist<[PropertyVariant](#propertyvariant-structure)> | props |
+| [SessionMember](#sessionmember-structure) | host |
+| qlist\<string> | unkStrings |
+| qlist<[SessionMember](#sessionmember-structure)> | members |
+| uint32 | unkUint3 |
+| uint32 | unkUint4 |
+| bool | unkBool |
+
+## MemberSessions ([Structure](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#structure))
+
+| Type | Name |
+|------|------|
+| [profileid](#profileid-structure) | memberPid |
+| qlist<[MatchmakingSession](#matchmakingsession-structure)> | sessions |
+
+## InvitationRequest ([Structure](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#structure))
+
+| Type | Name |
+|------|------|
+| uint32 | unkUint |
+| qlist<[profileid](#profileid-structure)> | members |
+| string | unkStr |
+
+## Inivitation ([Structure](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#structure))
+
+| Type | Name |
+|------|------|
+| uint32 | sessionId |
+| [profileid](#profileid-structure) | pid |
+| string | unkStr |
+| datetime | time |
+
+## ReceivedInvitationsResult ([Structure](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#structure))
+
+| Type | Name |
+|------|------|
+| qlist<[Invitation](#inivitation-structure)> | invitations |
+| uint32 | unkUint |
