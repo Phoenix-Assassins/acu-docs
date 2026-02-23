@@ -28,10 +28,11 @@ This method does not take any parameters.
 | uint32 | unkUint2 |
 | string | unkStr1 |
 | string | unkStr2 |
-| qlist\<[UnkType](#UnkType-structure)> | list |
 | string | unkStr3 |
+| qlist\<[Offer](#offer-structure)> | offers |
+| string | unkStr4 |
 
-## UnkType ([Structure](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#structure))
+## Offer ([Structure](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#structure))
 
 | Type | Name |
 |------|------|
