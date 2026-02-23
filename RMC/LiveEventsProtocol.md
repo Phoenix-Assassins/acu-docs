@@ -82,18 +82,18 @@ This method does not return anything.
 |------|------|
 | uint32 | unkUint1 |
 | bool | unkBool |
-| [UnkType](#unktype-structure) | unkObj |
+| [profileid](#profileid-structure) | pid |
 | uint32 | unkUint2 |
 | uint64 | unkLong1 |
 | uint64 | unkLong2 |
 | uint8 | unkByte |
 | qBuffer | buffer |
 
-## UnkType ([Structure](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#structure))
+## profileid ([Structure](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#structure))
 
 | Type | Name |
 |------|------|
-| uint32 | unkUint |
+| uint32 | pid |
 | uint16 | unkShort1 |
 | uint16 | unkShort2 |
 | uint16 | unkShort3 |
