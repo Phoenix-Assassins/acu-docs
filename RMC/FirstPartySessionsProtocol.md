@@ -15,15 +15,13 @@
 
 ### Request
 
-| Type | Name |
-|------|------|
-|  |  |
+Unused method, payload unknown.
 
 ### Response
 
 | Type | Name |
 |------|------|
-|  |  |
+| uint32 | unkUint |
 
 # (2) UpdateEntry
 
@@ -31,15 +29,11 @@
 
 ### Request
 
-| Type | Name |
-|------|------|
-|  |  |
+Unused method, payload unknown.
 
 ### Response
 
-| Type | Name |
-|------|------|
-|  |  |
+This method does not return anything.
 
 # (3) GetSessionId
 
@@ -47,15 +41,13 @@
 
 ### Request
 
-| Type | Name |
-|------|------|
-|  |  |
+Unused method, payload unknown.
 
 ### Response
 
 | Type | Name |
 |------|------|
-|  |  |
+| uint32 | sessionId |
 
 # (4) DeleteEntry
 
@@ -63,15 +55,11 @@
 
 ### Request
 
-| Type | Name |
-|------|------|
-|  |  |
+Unused method, payload unknown.
 
 ### Response
 
-| Type | Name |
-|------|------|
-|  |  |
+This method does not return anything.
 
 # (5) DisableEntry
 
@@ -79,15 +67,11 @@
 
 ### Request
 
-| Type | Name |
-|------|------|
-|  |  |
+Unused method, payload unknown.
 
 ### Response
 
-| Type | Name |
-|------|------|
-|  |  |
+This method does not return anything.
 
 # (6) EnableEntry
 
@@ -95,12 +79,8 @@
 
 ### Request
 
-| Type | Name |
-|------|------|
-|  |  |
+Unused method, payload unknown.
 
 ### Response
 
-| Type | Name |
-|------|------|
-|  |  |
+This method does not return anything.
