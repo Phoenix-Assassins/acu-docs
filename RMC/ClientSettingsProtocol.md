@@ -10,12 +10,10 @@
 
 ### Request
 
-| Type | Name |
-|------|------|
-|  |  |
+This method does not take any parameters.
 
 ### Response
 
 | Type | Name |
 |------|------|
-|  |  |
+| std_map<string,uint32> | lstSettings |
