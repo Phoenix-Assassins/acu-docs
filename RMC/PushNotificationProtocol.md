@@ -11,15 +11,11 @@
 
 ### Request
 
-| Type | Name |
-|------|------|
-|  |  |
+Unused method, payload unknown.
 
 ### Response
 
-| Type | Name |
-|------|------|
-|  |  |
+This method does not return anything.
 
 # (2) CancelNotification
 
@@ -29,10 +25,8 @@
 
 | Type | Name |
 |------|------|
-|  |  |
+| qlist\<uint32> | unkUints |
 
 ### Response
 
-| Type | Name |
-|------|------|
-|  |  |
+This method does not return anything.
