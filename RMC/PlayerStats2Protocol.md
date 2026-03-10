@@ -23,15 +23,11 @@
 
 ### Request
 
-| Type | Name |
-|------|------|
-|  |  |
+Unused method, payload unknown.
 
 ### Response
 
-| Type | Name |
-|------|------|
-|  |  |
+This method does not return anything.
 
 # (2) PostEvents
 
@@ -39,15 +35,11 @@
 
 ### Request
 
-| Type | Name |
-|------|------|
-|  |  |
+Unused method, payload unknown.
 
 ### Response
 
-| Type | Name |
-|------|------|
-|  |  |
+This method does not return anything.
 
 # (3) GetStatistics
 
@@ -55,15 +47,13 @@
 
 ### Request
 
-| Type | Name |
-|------|------|
-|  |  |
+Unused method, payload unknown.
 
 ### Response
 
 | Type | Name |
 |------|------|
-|  |  |
+| [PlayerStatistics](#playerstatistics-structure) | stats |
 
 # (4) GetStatisticsForPlayers
 
@@ -71,15 +61,13 @@
 
 ### Request
 
-| Type | Name |
-|------|------|
-|  |  |
+Unused method, payload unknown.
 
 ### Response
 
 | Type | Name |
 |------|------|
-|  |  |
+| qlist<[PlayerStatistics](#playerstatistics-structure)> | stats |
 
 # (5) GetStatisticGroup
 
@@ -87,15 +75,13 @@
 
 ### Request
 
-| Type | Name |
-|------|------|
-|  |  |
+Unused method, payload unknown.
 
 ### Response
 
 | Type | Name |
 |------|------|
-|  |  |
+| [PlayerStatistics](#playerstatistics-structure) | stats |
 
 # (6) GetStatisticGroupForPlayers
 
@@ -103,15 +89,13 @@
 
 ### Request
 
-| Type | Name |
-|------|------|
-|  |  |
+Unused method, payload unknown.
 
 ### Response
 
 | Type | Name |
 |------|------|
-|  |  |
+| qlist<[PlayerStatistics](#playerstatistics-structure)> | stats |
 
 # (7) GetStatisticsForPopulations
 
@@ -119,15 +103,13 @@
 
 ### Request
 
-| Type | Name |
-|------|------|
-|  |  |
+Unused method, payload unknown.
 
 ### Response
 
 | Type | Name |
 |------|------|
-|  |  |
+| qlist<[PlayerStatistics](#playerstatistics-structure)> | stats |
 
 # (8) GetLeaderboard
 
@@ -137,13 +119,14 @@
 
 | Type | Name |
 |------|------|
-|  |  |
+| uint32 | unkUint1 |
+| uint32 | unkUint2 |
 
 ### Response
 
 | Type | Name |
 |------|------|
-|  |  |
+| [Leaderboard](#leaderboard-structure) | leaderboard |
 
 # (9) GetLeaderboardForPlayers
 
@@ -151,15 +134,13 @@
 
 ### Request
 
-| Type | Name |
-|------|------|
-|  |  |
+Unused method, payload unknown.
 
 ### Response
 
 | Type | Name |
 |------|------|
-|  |  |
+| [Leaderboard](#leaderboard-structure) | leaderboard |
 
 # (10) GetLeaderboardNearPlayer
 
@@ -169,13 +150,14 @@
 
 | Type | Name |
 |------|------|
-|  |  |
+| string | unkStr |
+| uint32 | unkUint |
 
 ### Response
 
 | Type | Name |
 |------|------|
-|  |  |
+| [Leaderboard](#leaderboard-structure) | leaderboard |
 
 # (11) GetLeaderboardCenteredOnPlayer
 
@@ -183,15 +165,13 @@
 
 ### Request
 
-| Type | Name |
-|------|------|
-|  |  |
+Unused method, payload unknown.
 
 ### Response
 
 | Type | Name |
 |------|------|
-|  |  |
+| [Leaderboard](#leaderboard-structure) | leaderboard |
 
 # (12) GetLeaderboardForPopulations
 
@@ -199,15 +179,13 @@
 
 ### Request
 
-| Type | Name |
-|------|------|
-|  |  |
+Unused method, payload unknown.
 
 ### Response
 
 | Type | Name |
 |------|------|
-|  |  |
+| [Leaderboard](#leaderboard-structure) | leaderboard |
 
 # (13) GetLeaderboardNearPopulation
 
@@ -215,15 +193,13 @@
 
 ### Request
 
-| Type | Name |
-|------|------|
-|  |  |
+Unused method, payload unknown.
 
 ### Response
 
 | Type | Name |
 |------|------|
-|  |  |
+| [Leaderboard](#leaderboard-structure) | leaderboard |
 
 # (14) GetLeaderboardCenteredOnPopulation
 
@@ -231,12 +207,42 @@
 
 ### Request
 
-| Type | Name |
-|------|------|
-|  |  |
+Unused method, payload unknown.
 
 ### Response
 
 | Type | Name |
 |------|------|
-|  |  |
+| [Leaderboard](#leaderboard-structure) | leaderboard |
+
+# Types
+
+## PropertyVariant ([Structure](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#structure))
+
+| Type | Name |
+|------|------|
+| string | key |
+| variant | value |
+
+## PlayerStatistics ([Structure](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#structure))
+
+| Type | Name |
+|------|------|
+| string | unkStr |
+| qlist<[PropertyVariant](#propertyvariant-structure)> | stats |
+
+## Leaderboard ([Structure](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#structure))
+
+| Type | Name |
+|------|------|
+| uint32 | unkUint |
+| qlist<[LeaderboardRow](#leaderboardrow-structure)> | rows |
+
+## LeaderboardRow ([Structure](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#structure))
+
+| Type | Name |
+|------|------|
+| string | unkStr |
+| uint32 | unkUint |
+| uint64 | unkLong |
+| qlist<[PropertyVariant](#propertyvariant-structure)> | props |
