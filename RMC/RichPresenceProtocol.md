@@ -28,7 +28,7 @@ This method does not return anything.
 
 | Type | Name |
 |------|------|
-| qlist<[UnkType](#unktype-structure)> | unkObjs |
+| qlist<[profileid](#profileid-structure)> | pids |
 
 ### Response
 
@@ -38,11 +38,11 @@ This method does not return anything.
 
 # Types
 
-## UnkType ([Structure](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#structure))
+## profileid ([Structure](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#structure))
 
 | Type | Name |
 |------|------|
-| uint32 | unkUint |
+| uint32 | pid |
 | uint16 | unkShort1 |
 | uint16 | unkShort2 |
 | uint16 | unkShort3 |
@@ -54,7 +54,7 @@ This method does not return anything.
 
 | Type | Name |
 |------|------|
-| [UnkType](#unktype-structure) | unkObj |
+| [profileid](#profileid-structure) | pid |
 | bool | overrideStatus |
 | uint32 | unkUint |
 | qBuffer | props |
