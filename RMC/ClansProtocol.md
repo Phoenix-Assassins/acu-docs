@@ -34,13 +34,15 @@
 
 | Type | Name |
 |------|------|
-|  |  |
+| string | unkStr1 |
+| string | unkStr2 |
 
 ### Response
 
 | Type | Name |
 |------|------|
-|  |  |
+| uint32 | unkUint1 |
+| uint32 | unkUint2 |
 
 # (2) RenameClan
 
@@ -50,13 +52,14 @@
 
 | Type | Name |
 |------|------|
-|  |  |
+| string | unkStr1 |
+| string | unkStr2 |
 
 ### Response
 
 | Type | Name |
 |------|------|
-|  |  |
+| uint32 | unkUint |
 
 # (3) GetClansInfos
 
@@ -66,13 +69,13 @@
 
 | Type | Name |
 |------|------|
-|  |  |
+| qlist\<uint32> | clanIds |
 
 ### Response
 
 | Type | Name |
 |------|------|
-|  |  |
+| qlist<[Clan](#clan-structure)> | clans |
 
 # (4) GetClansNames
 
@@ -82,13 +85,13 @@
 
 | Type | Name |
 |------|------|
-|  |  |
+| qlist\<uint32> | clanIds |
 
 ### Response
 
 | Type | Name |
 |------|------|
-|  |  |
+| map\<uint32, string> | clanNames |
 
 # (5) GetPlayersClanInfos
 
@@ -98,13 +101,14 @@
 
 | Type | Name |
 |------|------|
-|  |  |
+| qlist<[profileid](#profileid-structure)> | pids |
 
 ### Response
 
 | Type | Name |
 |------|------|
-|  |  |
+| qlist\<uint32> | pids1 |
+| qlist\<uint32> | pids2 |
 
 # (6) GetMembersLists
 
@@ -114,13 +118,13 @@
 
 | Type | Name |
 |------|------|
-|  |  |
+| qlist\<uint32> | pids |
 
 ### Response
 
 | Type | Name |
 |------|------|
-|  |  |
+| qlist<qlist<[ClanMember](#clanmember-structure)>> | memberLists |
 
 # (7) InviteToClan
 
@@ -130,13 +134,13 @@
 
 | Type | Name |
 |------|------|
-|  |  |
+| [profileid](#profileid-structure) | pid |
 
 ### Response
 
 | Type | Name |
 |------|------|
-|  |  |
+| uint32 | unkUint |
 
 # (8) AcceptClanInvite
 
@@ -146,13 +150,13 @@
 
 | Type | Name |
 |------|------|
-|  |  |
+| uint32 | unkUint |
 
 ### Response
 
 | Type | Name |
 |------|------|
-|  |  |
+| uint32 | unkUint |
 
 # (9) LeaveClan
 
@@ -160,15 +164,13 @@
 
 ### Request
 
-| Type | Name |
-|------|------|
-|  |  |
+This method does not take any parameters.
 
 ### Response
 
 | Type | Name |
 |------|------|
-|  |  |
+| uint32 | unkUint |
 
 # (10) ChangeRole
 
@@ -178,13 +180,15 @@
 
 | Type | Name |
 |------|------|
-|  |  |
+| [profileid](#profileid-structure) | pid |
+| uint32 | unkUint1 |
+| uint32 | unkUint2 |
 
 ### Response
 
 | Type | Name |
 |------|------|
-|  |  |
+| uint32 | unkUint |
 
 # (11) Kick
 
@@ -194,13 +198,13 @@
 
 | Type | Name |
 |------|------|
-|  |  |
+| [profileid](#profileid-structure) | pid |
 
 ### Response
 
 | Type | Name |
 |------|------|
-|  |  |
+| uint32 | unkUint |
 
 # (12) WriteClanStats
 
@@ -210,13 +214,11 @@
 
 | Type | Name |
 |------|------|
-|  |  |
+| qlist<[ClanStatisticWriteStruct](#clanstatisticwritestruct-structure)> | stats |
 
 ### Response
 
-| Type | Name |
-|------|------|
-|  |  |
+This method does not return anything.
 
 # (13) WriteClanMemberStats
 
@@ -224,15 +226,11 @@
 
 ### Request
 
-| Type | Name |
-|------|------|
-|  |  |
+Unused method, payload unknown.
 
 ### Response
 
-| Type | Name |
-|------|------|
-|  |  |
+This method does not return anything.
 
 # (14) ReadClanStats
 
@@ -242,13 +240,13 @@
 
 | Type | Name |
 |------|------|
-|  |  |
+| qlist<[ClanStatisticData](#clanstatisticdata-structure)> | data |
 
 ### Response
 
 | Type | Name |
 |------|------|
-|  |  |
+| qlist<[ClanStatisticListRead](#clanstatisticlistread-structure)> | statLists |
 
 # (15) ReadClanMemberStats
 
@@ -256,15 +254,13 @@
 
 ### Request
 
-| Type | Name |
-|------|------|
-|  |  |
+Unused method, payload unknown.
 
 ### Response
 
 | Type | Name |
 |------|------|
-|  |  |
+| qlist<[ClanMemberStatisticReadList](#clanmemberstatisticreadlist-structure)> | statLists |
 
 # (16) SearchClanByStats
 
@@ -274,13 +270,16 @@
 
 | Type | Name |
 |------|------|
-|  |  |
+| qlist<[ClanStatisticWriteStruct](#clanstatisticwritestruct-structure)> | stats |
+| uint32 | unkUint1 |
+| uint32 | unkUint2 |
 
 ### Response
 
 | Type | Name |
 |------|------|
-|  |  |
+| qlist\<uint32> | clanIds |
+| uint32 | unkUint |
 
 # (17) SearchClanByName
 
@@ -290,13 +289,16 @@
 
 | Type | Name |
 |------|------|
-|  |  |
+| string | clanName |
+| uint32 | unkUint1 |
+| uint32 | unkUint2 |
 
 ### Response
 
 | Type | Name |
 |------|------|
-|  |  |
+| qlist\<uint32> | clanIds |
+| uint32 | unkUint |
 
 # (18) ApplyToClan
 
@@ -306,13 +308,13 @@
 
 | Type | Name |
 |------|------|
-|  |  |
+| uint32 | clanId |
 
 ### Response
 
 | Type | Name |
 |------|------|
-|  |  |
+| uint32 | unkUint |
 
 # (19) GetMyApplication
 
@@ -320,15 +322,13 @@
 
 ### Request
 
-| Type | Name |
-|------|------|
-|  |  |
+This method does not take any parameters.
 
 ### Response
 
 | Type | Name |
 |------|------|
-|  |  |
+| uint32 | unkUint |
 
 # (20) CancelMyApplication
 
@@ -336,15 +336,11 @@
 
 ### Request
 
-| Type | Name |
-|------|------|
-|  |  |
+Unused method, payload unknown.
 
 ### Response
 
-| Type | Name |
-|------|------|
-|  |  |
+This method does not return anything.
 
 # (21) GetClanApplications
 
@@ -352,15 +348,14 @@
 
 ### Request
 
-| Type | Name |
-|------|------|
-|  |  |
+This method does not take any parameters.
 
 ### Response
 
 | Type | Name |
 |------|------|
-|  |  |
+| qlist<[ClanApplication](#clanapplication-structure)> | applications |
+| uint32 | unkUint |
 
 # (22) AnswerClanApplication
 
@@ -370,13 +365,13 @@
 
 | Type | Name |
 |------|------|
-|  |  |
+| [profileid](#profileid-structure) | pid |
 
 ### Response
 
 | Type | Name |
 |------|------|
-|  |  |
+| uint32 | unkUint |
 
 # (23) GetClanNotifications
 
@@ -384,12 +379,117 @@
 
 ### Request
 
-| Type | Name |
-|------|------|
-|  |  |
+This method does not take any parameters.
 
 ### Response
 
 | Type | Name |
 |------|------|
-|  |  |
+| qlist<[ClanNotification](#clannotification-structure)> | notifs |
+| uint32 | unkUint |
+
+# Types
+
+## Clan ([Structure](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#structure))
+
+| Type | Name |
+|------|------|
+| uint32 | unkUint1 |
+| string | unkStr1 |
+| string | unkStr2 |
+| [profileid](#profileid-structure) | ownerPid |
+| uint32 | unkUint2 |
+| uint32 | unkUint3 |
+
+## ClanMember ([Structure](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#structure))
+
+| Type | Name |
+|------|------|
+| [profileid](#profileid-structure) | pid |
+| uint32 | unkUint1 |
+| uint32 | unkUint2 |
+
+## profileid ([Structure](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#structure))
+
+| Type | Name |
+|------|------|
+| uint32 | pid |
+| uint16 | unkShort1 |
+| uint16 | unkShort2 |
+| uint16 | unkShort3 |
+| uint16 | unkShort4 |
+| uint16 | unkShort5 |
+| uint16 | unkShort6 |
+
+## ClanStatisticWriteStruct ([Structure](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#structure))
+
+| Type | Name |
+|------|------|
+| uint32 | unkUint |
+| qlist<[ClanStatisticWriteValue](#clanstatisticwritevalue-structure)> | values |
+
+## ClanStatisticWriteValue ([Structure](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#structure))
+
+| Type | Name |
+|------|------|
+| bool | unkBool |
+| [ClanStatPolicy](#clanstatpolicy-structure) | policy |
+
+## ClanStatPolicy ([Structure](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#structure))
+
+| Type | Name |
+|------|------|
+| variant | variant |
+| uint32 | unkUint |
+
+## ClanStatisticData ([Structure](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#structure))
+
+| Type | Name |
+|------|------|
+| uint32 | unkUint |
+| qlist<uint8> | unkBytes |
+
+## ClanStatisticListRead ([Structure](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#structure))
+
+| Type | Name |
+|------|------|
+| uint32 | unkUint |
+| qlist<[ClanStatisticReadStruct](#clanstatisticreadstruct-structure)> | stats |
+
+## ClanStatisticReadStruct ([Structure](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#structure))
+
+| Type | Name |
+|------|------|
+| uint32 | unkUint |
+| qlist<[ClanStatisticReadValue](#clanstatisticreadvalue-structure)> | values |
+
+## ClanStatisticReadValue ([Structure](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#structure))
+
+| Type | Name |
+|------|------|
+| uint8 | key |
+| variant | value |
+
+## ClanMemberStatisticReadList ([Structure](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#structure))
+
+| Type | Name |
+|------|------|
+| [profileid](#profileid-structure) | pid |
+| qlist<[ClanStatisticReadStruct](#clanstatisticreadstruct-structure)> | stats |
+
+## ClanApplication ([Structure](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#structure))
+
+| Type | Name |
+|------|------|
+| uint32 | unkUint1 |
+| [profileid](#profileid-structure) | pid |
+| uint32 | unkUint2 |
+
+## ClanNotification ([Structure](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#structure))
+
+| Type | Name |
+|------|------|
+| uint32 | unkUint1 |
+| [profileid](#profileid-structure) | pid |
+| uint32 | unkUint2 |
+| uint32 | unkUint3 |
