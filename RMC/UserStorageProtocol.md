@@ -44,13 +44,13 @@
 
 | Type | Name |
 |------|------|
-|  |  |
+| [UserStorageQuery](#userstoragequery-structure) | query |
 
 ### Response
 
 | Type | Name |
 |------|------|
-|  |  |
+| qlist<[UserContent](#usercontent-structure)> | contents |
 
 # (2) SearchContentsWithTotal
 
@@ -58,15 +58,14 @@
 
 ### Request
 
-| Type | Name |
-|------|------|
-|  |  |
+Unused method, payload unknown.
 
 ### Response
 
 | Type | Name |
 |------|------|
-|  |  |
+| qlist<[UserContent](#usercontent-structure)> | contents |
+| uint32 | unkUint |
 
 # (3) DeleteContent
 
@@ -74,15 +73,11 @@
 
 ### Request
 
-| Type | Name |
-|------|------|
-|  |  |
+Unused method, payload unknown.
 
 ### Response
 
-| Type | Name |
-|------|------|
-|  |  |
+This method does not return anything.
 
 # (4) SaveMetaData
 
@@ -90,15 +85,13 @@
 
 ### Request
 
-| Type | Name |
-|------|------|
-|  |  |
+Unused method, payload unknown.
 
 ### Response
 
 | Type | Name |
 |------|------|
-|  |  |
+| [UserContentKey](#usercontentkey-structure) | key |
 
 # (5) SaveContentDB
 
@@ -108,13 +101,15 @@
 
 | Type | Name |
 |------|------|
-|  |  |
+| qlist<[PropertyVariant2](#propertyvariant2-structure)> | props |
+| [Buffer](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#buffer) | content |
+| [UserContentKey](#usercontentkey-structure) | key |
 
 ### Response
 
 | Type | Name |
 |------|------|
-|  |  |
+| [UserContentKey](#usercontentkey-structure) | key |
 
 # (6) SaveContentAndGetUploadInfo
 
@@ -124,13 +119,16 @@
 
 | Type | Name |
 |------|------|
-|  |  |
+| qlist<[PropertyVariant2](#propertyvariant2-structure)> | props |
+| [UserContentKey](#usercontentkey-structure) | key |
+| qlist<[ContentUploadRequest](#contentuploadrequest-structure)> | request |
 
 ### Response
 
 | Type | Name |
 |------|------|
-|  |  |
+| qlist<[ContentUploadResponse](#contentuploadresponse-structure)> | responses |
+| uint64 | unkLong |
 
 # (7) UploadEnd
 
@@ -140,13 +138,14 @@
 
 | Type | Name |
 |------|------|
-|  |  |
+| uint64 | unkLong |
+| [UserContentKey](#usercontentkey-structure) | key |
 
 ### Response
 
 | Type | Name |
 |------|------|
-|  |  |
+| [UserContentKey](#usercontentkey-structure) | key |
 
 # (8) UpdateExternalContent
 
@@ -154,15 +153,13 @@
 
 ### Request
 
-| Type | Name |
-|------|------|
-|  |  |
+Unused method, payload unknown.
 
 ### Response
 
 | Type | Name |
 |------|------|
-|  |  |
+| qlist<[ContentUploadResponse](#contentuploadresponse-structure)> | responses |
 
 # (9) GetContentDB
 
@@ -172,13 +169,13 @@
 
 | Type | Name |
 |------|------|
-|  |  |
+| [UserContentKey](#usercontentkey-structure) | key |
 
 ### Response
 
 | Type | Name |
 |------|------|
-|  |  |
+| [Buffer](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#buffer) | content |
 
 # (10) GetContentURL
 
@@ -186,15 +183,13 @@
 
 ### Request
 
-| Type | Name |
-|------|------|
-|  |  |
+Unused method, payload unknown.
 
 ### Response
 
 | Type | Name |
 |------|------|
-|  |  |
+| qlist<string> | urls |
 
 # (11) GetContentURLAndSize
 
@@ -204,13 +199,14 @@
 
 | Type | Name |
 |------|------|
-|  |  |
+| [UserContentKey](#usercontentkey-structure) | key |
 
 ### Response
 
 | Type | Name |
 |------|------|
-|  |  |
+| qlist<string> | urls |
+| qlist\<uint> | sizes |
 
 # (12) GetMetaData
 
@@ -218,15 +214,15 @@
 
 ### Request
 
-| Type | Name |
-|------|------|
-|  |  |
+Unused method, payload unknown.
 
 ### Response
 
 | Type | Name |
 |------|------|
-|  |  |
+| [UserContentKey](#usercontentkey-structure) | key |
+| [profileid](#profileid-structure) | pid |
+| qlist<[PropertyVariant2](#propertyvariant2-structure)> | props |
 
 # (13) Like
 
@@ -234,15 +230,11 @@
 
 ### Request
 
-| Type | Name |
-|------|------|
-|  |  |
+Unused method, payload unknown.
 
 ### Response
 
-| Type | Name |
-|------|------|
-|  |  |
+This method does not return anything.
 
 # (14) Dislike
 
@@ -250,15 +242,11 @@
 
 ### Request
 
-| Type | Name |
-|------|------|
-|  |  |
+Unused method, payload unknown.
 
 ### Response
 
-| Type | Name |
-|------|------|
-|  |  |
+This method does not return anything.
 
 # (15) ResetLikeState
 
@@ -266,15 +254,11 @@
 
 ### Request
 
-| Type | Name |
-|------|------|
-|  |  |
+Unused method, payload unknown.
 
 ### Response
 
-| Type | Name |
-|------|------|
-|  |  |
+This method does not return anything.
 
 # (16) GetLikeState
 
@@ -282,15 +266,13 @@
 
 ### Request
 
-| Type | Name |
-|------|------|
-|  |  |
+Unused method, payload unknown.
 
 ### Response
 
 | Type | Name |
 |------|------|
-|  |  |
+| uint32 | state |
 
 # (17) GetFavorites
 
@@ -298,15 +280,14 @@
 
 ### Request
 
-| Type | Name |
-|------|------|
-|  |  |
+Unused method, payload unknown.
 
 ### Response
 
 | Type | Name |
 |------|------|
-|  |  |
+| qlist<[UserContent](#usercontent-structure)> | contents |
+| uint32 | unkUint |
 
 # (18) MakeFavorite
 
@@ -314,15 +295,11 @@
 
 ### Request
 
-| Type | Name |
-|------|------|
-|  |  |
+Unused method, payload unknown.
 
 ### Response
 
-| Type | Name |
-|------|------|
-|  |  |
+This method does not return anything.
 
 # (19) RemoveFromFavorites
 
@@ -330,15 +307,11 @@
 
 ### Request
 
-| Type | Name |
-|------|------|
-|  |  |
+Unused method, payload unknown.
 
 ### Response
 
-| Type | Name |
-|------|------|
-|  |  |
+This method does not return anything.
 
 # (20) ReportInappropriate
 
@@ -346,15 +319,11 @@
 
 ### Request
 
-| Type | Name |
-|------|------|
-|  |  |
+Unused method, payload unknown.
 
 ### Response
 
-| Type | Name |
-|------|------|
-|  |  |
+This method does not return anything.
 
 # (21) IncrementPlayCount
 
@@ -362,15 +331,11 @@
 
 ### Request
 
-| Type | Name |
-|------|------|
-|  |  |
+Unused method, payload unknown.
 
 ### Response
 
-| Type | Name |
-|------|------|
-|  |  |
+This method does not return anything.
 
 # (22) UpdateCustomStat
 
@@ -378,15 +343,11 @@
 
 ### Request
 
-| Type | Name |
-|------|------|
-|  |  |
+Unused method, payload unknown.
 
 ### Response
 
-| Type | Name |
-|------|------|
-|  |  |
+This method does not return anything.
 
 # (23) GetOwnContents
 
@@ -394,15 +355,13 @@
 
 ### Request
 
-| Type | Name |
-|------|------|
-|  |  |
+Unused method, payload unknown.
 
 ### Response
 
 | Type | Name |
 |------|------|
-|  |  |
+| qlist<[UserContent](#usercontent-structure)> | contents |
 
 # (24) GetMostPopularTags
 
@@ -410,15 +369,14 @@
 
 ### Request
 
-| Type | Name |
-|------|------|
-|  |  |
+Unused method, payload unknown.
 
 ### Response
 
 | Type | Name |
 |------|------|
-|  |  |
+| qlist<[Tag](#tag-structure)> | tags |
+| uint32 | unkUint |
 
 # (25) GetTags
 
@@ -426,15 +384,13 @@
 
 ### Request
 
-| Type | Name |
-|------|------|
-|  |  |
+Unused method, payload unknown.
 
 ### Response
 
 | Type | Name |
 |------|------|
-|  |  |
+| qlist\<uint32> | tags |
 
 # (26) TagContent
 
@@ -442,15 +398,11 @@
 
 ### Request
 
-| Type | Name |
-|------|------|
-|  |  |
+Unused method, payload unknown.
 
 ### Response
 
-| Type | Name |
-|------|------|
-|  |  |
+This method does not return anything.
 
 # (27) SearchContentsByPlayers
 
@@ -460,13 +412,14 @@
 
 | Type | Name |
 |------|------|
-|  |  |
+| qlist<[profileid](#profileid-structure)> | pids |
+| [UserStorageQuery](#userstoragequery-structure) | query |
 
 ### Response
 
 | Type | Name |
 |------|------|
-|  |  |
+| qlist<[UserContent](#usercontent-structure)> | contents |
 
 # (28) SearchContentsByPlayersWithTotal
 
@@ -474,15 +427,14 @@
 
 ### Request
 
-| Type | Name |
-|------|------|
-|  |  |
+Unused method, payload unknown.
 
 ### Response
 
 | Type | Name |
 |------|------|
-|  |  |
+| qlist<[UserContent](#usercontent-structure)> | contents |
+| uint32 | unkUint |
 
 # (29) Rate
 
@@ -490,15 +442,11 @@
 
 ### Request
 
-| Type | Name |
-|------|------|
-|  |  |
+Unused method, payload unknown.
 
 ### Response
 
-| Type | Name |
-|------|------|
-|  |  |
+This method does not return anything.
 
 # (30) GetStarRating
 
@@ -506,15 +454,15 @@
 
 ### Request
 
-| Type | Name |
-|------|------|
-|  |  |
+Unused method, payload unknown.
 
 ### Response
 
 | Type | Name |
 |------|------|
-|  |  |
+| uint32 | unkUint1 |
+| uint32 | unkUint2 |
+| uint32 | unkUint3 |
 
 # (31) GetRemainingQuota
 
@@ -522,15 +470,13 @@
 
 ### Request
 
-| Type | Name |
-|------|------|
-|  |  |
+Unused method, payload unknown.
 
 ### Response
 
 | Type | Name |
 |------|------|
-|  |  |
+| uint32 | count |
 
 # (32) GetTotalQuota
 
@@ -538,15 +484,13 @@
 
 ### Request
 
-| Type | Name |
-|------|------|
-|  |  |
+Unused method, payload unknown.
 
 ### Response
 
 | Type | Name |
 |------|------|
-|  |  |
+| uint32 | count |
 
 # (33) GetFeed
 
@@ -554,12 +498,77 @@
 
 ### Request
 
-| Type | Name |
-|------|------|
-|  |  |
+Unused method, payload unknown.
 
 ### Response
 
 | Type | Name |
 |------|------|
-|  |  |
+| qlist<[UserContent](#usercontent-structure)> | contents |
+| uint32 | unkUint |
+
+# Types
+
+## UserStorageQuery ([Structure](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#structure))
+
+| Type | Name |
+|------|------|
+| uint32 | unkUint1 |
+| uint32 | unkUint2 |
+| [ResultRange](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#resultrange-structure) | range |
+| qlist<[PropertyVariant2](#propertyvariant2-structure)> | props |
+
+## PropertyVariant2 ([Structure](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#structure))
+
+| Type | Name |
+|------|------|
+| uint32 | unkUint |
+| variant | variant |
+
+## profileid ([Structure](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#structure))
+
+| Type | Name |
+|------|------|
+| uint32 | pid |
+| uint16 | unkShort1 |
+| uint16 | unkShort2 |
+| uint16 | unkShort3 |
+| uint16 | unkShort4 |
+| uint16 | unkShort5 |
+| uint16 | unkShort6 |
+
+## UserContent ([Structure](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#structure))
+
+| Type | Name |
+|------|------|
+| [UserContentKey](#usercontentkey-structure) | key |
+| [profileid](#profileid-structure) | pid |
+| qlist<[PropertyVariant2](#propertyvariant2-structure)> | props |
+
+## UserContentKey ([Structure](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#structure))
+
+| Type | Name |
+|------|------|
+| uint32 | unkUint |
+| uint64 | unkLong |
+
+## ContentUploadRequest ([Structure](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#structure))
+
+| Type | Name |
+|------|------|
+| uint32 | unkUint1 |
+| uint32 | unkUint2 |
+
+## ContentUploadResponse ([Structure](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#structure))
+
+| Type | Name |
+|------|------|
+| string | unkStr |
+| qlist<string> | unkStrings |
+
+## Tag ([Structure](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#structure))
+
+| Type | Name |
+|------|------|
+| uint32 | unkUint1 |
+| uint32 | unkUint2 |
