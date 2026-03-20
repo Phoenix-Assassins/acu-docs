@@ -18,7 +18,7 @@ This method does not take any parameters.
 
 | Type | Name |
 |------|------|
-| qlist<NotificationEvent> | listNotifications |
+| qlist<[NotificationEvent](#notificationevent-structure)> | listNotifications |
 | uint32 | nbRemainingNotifs |
 
 # (2) PollSpecificOfflineNotifications
@@ -29,13 +29,13 @@ This method does not take any parameters.
 
 | Type | Name |
 |------|------|
-| qlist<uint32> | majortype |
+| qlist\<uint32> | majortype |
 
 ### Response
 
 | Type | Name |
 |------|------|
-| qlist<TimedNotification> | listTimedNotification |
+| qlist<[TimedNotification](#timednotification-structure)> | listTimedNotification |
 | uint32 | ret |
 
 # (3) PollAnyOfflineNotifications
@@ -50,7 +50,7 @@ This method does not take any parameters.
 
 | Type | Name |
 |------|------|
-| qlist<TimedNotification> | listTimedNotification |
+| qlist<[TimedNotification](#timednotification-structure)> | listTimedNotification |
 | uint32 | nbRemainingNotifs |
 
 # Types
@@ -68,4 +68,4 @@ Extends `Data`.
 | Type | Name |
 |------|------|
 | datetime | timestamp |
-| NotificationEvent | notification |
+| [NotificationEvent](#notificationevent-structure) | notification |
