@@ -13,13 +13,15 @@
 
 ### Request
 
-Unused method, payload unknown.
+| Type | Name |
+|------|------|
+| [ChallengeSearchQuery](#challengesearchquery-structure) | query |
 
 ### Response
 
 | Type | Name |
 |------|------|
-| [ChallengeList](#challengelist-structure) | challenges |
+| [ChallengeSearchResult](#challengesearchresult-structure) | result |
 
 # (2) Join
 
@@ -27,7 +29,9 @@ Unused method, payload unknown.
 
 ### Request
 
-Unused method, payload unknown.
+| Type | Name |
+|------|------|
+| [ChallengeJoinData](#challengejoindata-structure) | joinData |
 
 ### Response
 
@@ -39,13 +43,15 @@ This method does not return anything.
 
 ### Request
 
-Unused method, payload unknown.
+| Type | Name |
+|------|------|
+| [ChallengeProgressionUpdate](#challengeprogressionupdate-structure) | challengeProgressionUpdate |
 
 ### Response
 
 | Type | Name |
 |------|------|
-| [ChallengeProgression](#challengeprogression-structure) | progression |
+| [ChallengeProgression](#challengeprogression-structure) | challengeProgression |
 
 # (4) ReadProgressions
 
@@ -53,89 +59,103 @@ Unused method, payload unknown.
 
 ### Request
 
-Unused method, payload unknown.
+| Type | Name |
+|------|------|
+| [ChallengeProgressionQuery](#challengeprogressionquery-structure) | query |
 
 ### Response
 
 | Type | Name |
 |------|------|
-| qlist<[ChallengeProgression](#challengeprogression-structure)> | progressions |
+| qlist<[ChallengeProgression](#challengeprogression-structure)> | results |
 
 # Types
 
-## ChallengeList ([Structure](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#structure))
+## ChallengeSearchQuery ([Structure](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#structure))
 
 | Type | Name |
 |------|------|
-| qlist<[ChallengeData](#challengedata-structure)> | data |
-| uint32 | unkUint |
+| qlist\<uint32> | m_availabilities |
+| qlist\<string> | m_categories |
+| uint32 | m_joinStatus |
+| ResultRange | m_range |
 
-## ChallengeData ([Structure](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#structure))
-
-| Type | Name |
-|------|------|
-| uint32 | unkUint1 |
-| string | unkStr |
-| uint32 | unkUint2 |
-| uint64 | unkLong1 |
-| uint64 | unkLong2 |
-| uint64 | unkLong3 |
-| qlist<[PropertyVariant](#propertyvariant-structure)> | props1 |
-| qlist<[PropertyVariant](#propertyvariant-structure)> | props2 |
-| qlist<[PropertyVariant](#propertyvariant-structure)> | props3 |
-| qlist<[UnkType](#unktype-structure)> | unkObjs |
-| bool | unkBool |
-
-## PropertyVariant ([Structure](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#structure))
+## ChallengeSearchResult ([Structure](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#structure))
 
 | Type | Name |
 |------|------|
-| string | key |
-| variant | value |
+| qlist<[ChallengeDefinition](#challengedefinition-structure)> | m_challengeDefinitions |
+| uint32 | m_totalResultCount |
 
-## UnkType ([Structure](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#structure))
+## ChallengeDefinition ([Structure](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#structure))
 
 | Type | Name |
 |------|------|
-| string | unkStr1 |
-| string | unkStr2 |
+| uint32 | m_challengeId |
+| string | m_category |
+| uint32 | m_availability |
+| datetime | m_startTeaseTime |
+| datetime | m_startAvailabilityTime |
+| datetime | m_endAvailabilityTime |
+| std_map\<string,variant> | m_joinParams |
+| std_map\<string,variant> | m_progressionParams |
+| std_map\<string,variant> | m_extraParams |
+| std_map\<string,string> | m_localizedStrings |
+| bool | m_hasJoined |
+
+## ChallengeJoinData ([Structure](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#structure))
+
+| Type | Name |
+|------|------|
+| uint32 | m_challengeId |
+| std_map\<string,variant> | m_joinParams |
+
+## ChallengeProgressionUpdate ([Structure](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#structure))
+
+| Type | Name |
+|------|------|
+| uint32 | m_challengeId |
+| std_map\<string,variant> | m_progressionParams |
 
 ## ChallengeProgression ([Structure](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#structure))
-Real name unknown.
 
 | Type | Name |
 |------|------|
-| uint32 | unkUint |
-| [ChallengeProgressionUnkType1](#challengeprogressionunktype1-structure) | unkObj |
-| qlist<[ChallengeProgressionUnkType2](#challengeprogressionunktype2-structure)> | unkObjs2 |
-| qlist<[ChallengeProgressionUnkType3](#challengeprogressionunktype3-structure)> | unkObjs2 |
-| qlist<[PropertyVariant](#propertyvariant-structure)> | props |
+| uint32 | m_challengeId |
+| [Progression](#progression-structure) | m_globalProgression |
+| std_map<[profileid](#profileid-structure),[PlayerProgression](#playerprogression-structure)> | m_playerProgressions |
+| std_map<string,[Progression](#progression-structure)> | m_teamProgressions |
+| std_map<string,variant> | m_returnValues |
 
-## ChallengeProgressionUnkType1 ([Structure](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#structure))
-
-| Type | Name |
-|------|------|
-| qlist<[PropertyVariant](#propertyvariant-structure)> | props |
-| uint64 | unkLong |
-| uint32 | unkUint |
-
-## ChallengeProgressionUnkType2 ([Structure](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#structure))
+## Progression ([Structure](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#structure))
 
 | Type | Name |
 |------|------|
-| [profileid](#profileid-structure) | pid |
-| uint64 | unkLong |
-| string | unkStr |
-| [ChallengeProgressionUnkType1](#challengeprogressionunktype1-structure) | unkObj |
+| std_map\<string,variant> | m_parameters |
+| datetime | m_lastUpdate |
+| uint32 | m_state |
 
-## ChallengeProgressionUnkType3 ([Structure](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#structure))
+## PlayerProgression ([Structure](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#structure))
 
 | Type | Name |
 |------|------|
-| string | unkStr |
-| qlist<[PropertyVariant](#propertyvariant-structure)> | props |
-| uint64 | unkLong |
-| uint32 | unkUint |
+| datetime | m_joinTime |
+| string | m_team |
+| [Progression](#progression-structure) | m_progression |
+
+## ChallengeProgressionQuery ([Structure](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#structure))
+
+| Type | Name |
+|------|------|
+| qlist<[ProgressionQueryElement](#progressionqueryelement-structure)> | m_queryElements |
+| qlist<[profileid](#profileid-structure)> | m_pids |
+
+## ProgressionQueryElement ([Structure](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#structure))
+
+| Type | Name |
+|------|------|
+| uint32 | m_challengeId |
+| qlist\<string> | m_teams |
 
 ## profileid ([Structure](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#structure))
 
